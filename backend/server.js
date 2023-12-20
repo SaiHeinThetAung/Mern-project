@@ -1,0 +1,17 @@
+const express=require('express')
+const mongoose=require('mongoose')
+const cors=require('cors')
+const quizRoute=require('./routes/quizRoute')
+ const app=express()
+ require('dotenv').config()
+ app.use(express.json())
+ app.use(cors())
+ mongoose.connect(process.env.DB)
+ .then(console.log('connected to db'))
+ .catch(e=>console.log(e))
+ app.use('/api/quiz',quizRoute)
+ app.listen(process.env.PORT,(e)=>{
+    if(e) return console.log(e)
+    console.log('running on port 4000')
+ })
+ 

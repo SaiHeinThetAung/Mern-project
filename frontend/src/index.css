@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    background-image:url('https://img.freepik.com/free-vector/light-purple-blurred-background-with-glow_1258-41341.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
